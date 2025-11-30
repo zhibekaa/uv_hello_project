@@ -1,0 +1,13 @@
+name: Run tests
+on: [push]
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out
+        uses: actions/checkout@v4
+      - name: Install uv
+        uses: astral-sh/setup-uv@v6
+      - name: Run tests
+        run: uv run python tests/tests.py
