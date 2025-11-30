@@ -1,4 +1,5 @@
-from src.hw05_workshop import sum_func
+def sum_func(a: int, b: int) -> int:
+    return a + b
 
 
 def test_sum_func():
